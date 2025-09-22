@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -19,7 +19,7 @@
     <name>quiz-builder-backend</name>
     <description>Quiz Builder Backend</description>
 
-    <!-- ⚠️ Important: WAR packaging -->
+    <!-- ⚠️ WAR packaging for external Tomcat -->
     <packaging>war</packaging>
 
     <properties>
@@ -48,14 +48,14 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Tomcat provided for external server -->
+        <!-- Provided Tomcat for external server -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
 
-        <!-- Dev tools (optional) -->
+        <!-- Devtools (optional) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -83,5 +83,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
